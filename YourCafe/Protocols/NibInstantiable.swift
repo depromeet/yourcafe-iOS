@@ -8,9 +8,9 @@
 
 import UIKit
 
-protocol NibInstantiatable { }
+protocol NibInstantiable { }
 
-extension NibInstantiatable where Self: UIView {
+extension NibInstantiable where Self: UIView {
     static func instantiateFromNib() -> Self? {
         let bundle = Bundle.main.loadNibNamed(String(describing: self), owner: self, options: nil)
         return bundle?.first as? Self

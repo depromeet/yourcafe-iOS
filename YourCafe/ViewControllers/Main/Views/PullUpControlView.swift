@@ -17,7 +17,7 @@ protocol PullUpControlViewDataSource: class {
     func heightOfSearchControlView(_ pullUpControlView: PullUpControlView) -> CGFloat
 }
 
-class PullUpControlView: UIView, NibInstantiatable {
+class PullUpControlView: UIView, NibInstantiable {
     private var panInitialHeight: CGFloat?
     
     var delegate: PullUpControlViewDelegate?

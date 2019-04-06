@@ -16,7 +16,7 @@
 		3E6E66D622588D1400341819 /* EditViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E6E66D522588D1400341819 /* EditViewController.storyboard */; };
 		3E6E66DD2258994F00341819 /* PullUpControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E66DC2258994F00341819 /* PullUpControlView.swift */; };
 		3E6E66DF2258995E00341819 /* PullUpControlView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E6E66DE2258995E00341819 /* PullUpControlView.xib */; };
-		3E6E66E62258CAEC00341819 /* NibInstantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E66E52258CAEC00341819 /* NibInstantiatable.swift */; };
+		3E6E66E62258CAEC00341819 /* NibInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E66E52258CAEC00341819 /* NibInstantiable.swift */; };
 		3ED39AFF2258869E009AB9AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED39AFE2258869E009AB9AD /* AppDelegate.swift */; };
 		3ED39B062258869F009AB9AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ED39B052258869F009AB9AD /* Assets.xcassets */; };
 		3ED39B092258869F009AB9AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ED39B072258869F009AB9AD /* LaunchScreen.storyboard */; };
@@ -53,7 +53,7 @@
 		3E6E66D522588D1400341819 /* EditViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditViewController.storyboard; sourceTree = "<group>"; };
 		3E6E66DC2258994F00341819 /* PullUpControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullUpControlView.swift; sourceTree = "<group>"; };
 		3E6E66DE2258995E00341819 /* PullUpControlView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PullUpControlView.xib; sourceTree = "<group>"; };
-		3E6E66E52258CAEC00341819 /* NibInstantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibInstantiatable.swift; sourceTree = "<group>"; };
+		3E6E66E52258CAEC00341819 /* NibInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibInstantiable.swift; sourceTree = "<group>"; };
 		3ED39AFB2258869E009AB9AD /* YourCafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourCafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ED39AFE2258869E009AB9AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3ED39B052258869F009AB9AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -174,7 +174,7 @@
 		3E6E66E22258B46F00341819 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				3E6E66E52258CAEC00341819 /* NibInstantiatable.swift */,
+				3E6E66E52258CAEC00341819 /* NibInstantiable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -475,7 +475,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E6E66E62258CAEC00341819 /* NibInstantiatable.swift in Sources */,
+				3E6E66E62258CAEC00341819 /* NibInstantiable.swift in Sources */,
 				3E6E66CF22588C9700341819 /* EditViewController.swift in Sources */,
 				3E6E66CD22588C8300341819 /* DetailViewController.swift in Sources */,
 				3ED39AFF2258869E009AB9AD /* AppDelegate.swift in Sources */,
