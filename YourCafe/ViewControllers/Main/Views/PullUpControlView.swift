@@ -8,21 +8,6 @@
 
 import UIKit
 
-extension NSObject {
-    static var reuseIdentifier: String {
-        return String(describing: self)
-    }
-}
-
-protocol NibInstantiatable { }
-
-extension NibInstantiatable where Self: UIView {
-    static func instantiateFromNib() -> Self? {
-        let bundle = Bundle.main.loadNibNamed(String(describing: self), owner: self, options: nil)
-        return bundle?.first as? Self
-    }
-}
-
 protocol PullUpControlViewDelegate: class {
     func pullUpControlView(_ pullUpSearchControlView: PullUpControlView, didPanned height: CGFloat)
 }
