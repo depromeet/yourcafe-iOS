@@ -14,6 +14,8 @@
 		3E6E66D122588CAB00341819 /* MapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E6E66D022588CAB00341819 /* MapViewController.storyboard */; };
 		3E6E66D322588CEA00341819 /* DetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E6E66D222588CEA00341819 /* DetailViewController.storyboard */; };
 		3E6E66D622588D1400341819 /* EditViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E6E66D522588D1400341819 /* EditViewController.storyboard */; };
+		3E6E66DD2258994F00341819 /* PullUpControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E66DC2258994F00341819 /* PullUpControlView.swift */; };
+		3E6E66DF2258995E00341819 /* PullUpControlView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E6E66DE2258995E00341819 /* PullUpControlView.xib */; };
 		3ED39AFF2258869E009AB9AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED39AFE2258869E009AB9AD /* AppDelegate.swift */; };
 		3ED39B062258869F009AB9AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ED39B052258869F009AB9AD /* Assets.xcassets */; };
 		3ED39B092258869F009AB9AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ED39B072258869F009AB9AD /* LaunchScreen.storyboard */; };
@@ -48,6 +50,8 @@
 		3E6E66D022588CAB00341819 /* MapViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapViewController.storyboard; sourceTree = "<group>"; };
 		3E6E66D222588CEA00341819 /* DetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailViewController.storyboard; sourceTree = "<group>"; };
 		3E6E66D522588D1400341819 /* EditViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditViewController.storyboard; sourceTree = "<group>"; };
+		3E6E66DC2258994F00341819 /* PullUpControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullUpControlView.swift; sourceTree = "<group>"; };
+		3E6E66DE2258995E00341819 /* PullUpControlView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PullUpControlView.xib; sourceTree = "<group>"; };
 		3ED39AFB2258869E009AB9AD /* YourCafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourCafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ED39AFE2258869E009AB9AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3ED39B052258869F009AB9AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -117,23 +121,10 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		3E6E66C222588BA800341819 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		3E6E66C322588BAC00341819 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		3E6E66C422588BC200341819 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				3E6E66D92258990100341819 /* Views */,
 				3E6E66CA22588C7900341819 /* MapViewController.swift */,
 				3E6E66D022588CAB00341819 /* MapViewController.storyboard */,
 			);
@@ -169,6 +160,22 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		3E6E66D92258990100341819 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3E6E66DC2258994F00341819 /* PullUpControlView.swift */,
+				3E6E66DE2258995E00341819 /* PullUpControlView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3E6E66E22258B46F00341819 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		3ED39AF22258869E009AB9AD = {
 			isa = PBXGroup;
 			children = (
@@ -194,9 +201,8 @@
 		3ED39AFD2258869E009AB9AD /* YourCafe */ = {
 			isa = PBXGroup;
 			children = (
+				3E6E66E22258B46F00341819 /* Protocols */,
 				3E6E66C922588C3700341819 /* Resources */,
-				3E6E66C322588BAC00341819 /* Extensions */,
-				3E6E66C222588BA800341819 /* Model */,
 				3E6E66C122588BA200341819 /* ViewControllers */,
 			);
 			path = YourCafe;
@@ -345,6 +351,7 @@
 				3ED39B092258869F009AB9AD /* LaunchScreen.storyboard in Resources */,
 				3ED39B062258869F009AB9AD /* Assets.xcassets in Resources */,
 				3E6E66D122588CAB00341819 /* MapViewController.storyboard in Resources */,
+				3E6E66DF2258995E00341819 /* PullUpControlView.xib in Resources */,
 				3E6E66D622588D1400341819 /* EditViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -469,6 +476,7 @@
 				3E6E66CD22588C8300341819 /* DetailViewController.swift in Sources */,
 				3ED39AFF2258869E009AB9AD /* AppDelegate.swift in Sources */,
 				3E6E66CB22588C7900341819 /* MapViewController.swift in Sources */,
+				3E6E66DD2258994F00341819 /* PullUpControlView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
