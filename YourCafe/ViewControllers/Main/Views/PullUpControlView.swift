@@ -9,7 +9,7 @@
 import UIKit
 
 protocol PullUpControlViewDelegate: class {
-    func pullUpControlView(_ pullUpSearchControlView: PullUpControlView, didPanned height: CGFloat)
+    func pullUpControlView(_ pullUpSearchControlView: PullUpControlView, didPanned height: CGFloat, animated: Bool)
 }
 
 protocol PullUpControlViewDataSource: class {

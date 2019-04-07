@@ -63,7 +63,13 @@ extension MapViewController: PullUpControlViewDataSource {
 }
 
 extension MapViewController: PullUpControlViewDelegate {
-    func pullUpControlView(_ pullUpControlView: PullUpControlView, didPanned height: CGFloat) {
+    func pullUpControlView(_ pullUpControlView: PullUpControlView, didPanned height: CGFloat, animated: Bool) {
         pullUpControlViewHeightConstraint?.constant = height
+        
+        if animated {
+            UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0, options: .curveEaseOut, animations: {
+                self.view.layoutIfNeeded()
+            }, completion: nil)
+        }
     }
 }
