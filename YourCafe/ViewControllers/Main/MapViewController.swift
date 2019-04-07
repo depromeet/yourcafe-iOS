@@ -57,8 +57,12 @@ extension MapViewController: PullUpControlViewDataSource {
         return view.frame.height
     }
     
-    func heightOfSearchControlView(_ pullUpSearchControlView: PullUpControlView) -> CGFloat {
+    func minimumHeightOfPullUpControlView(_ pullUpSearchControlView: PullUpControlView) -> CGFloat {
         return pullUpControlViewHeight
+    }
+    
+    func maximumHeightOfPullUpControlView(_ pullUpControlView: PullUpControlView) -> CGFloat {
+        return 400
     }
 }
 

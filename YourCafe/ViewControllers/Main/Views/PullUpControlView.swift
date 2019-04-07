@@ -14,14 +14,27 @@ protocol PullUpControlViewDelegate: class {
 
 protocol PullUpControlViewDataSource: class {
     func heightOfContainerView(_ pullUpControlView: PullUpControlView) -> CGFloat
-    func heightOfSearchControlView(_ pullUpControlView: PullUpControlView) -> CGFloat
+    func minimumHeightOfPullUpControlView(_ pullUpControlView: PullUpControlView) -> CGFloat
+    func maximumHeightOfPullUpControlView(_ pullUpControlView: PullUpControlView) -> CGFloat
 }
 
 class PullUpControlView: UIView, NibInstantiable {
+    enum Control {
+        case pullUp
+        case pullDown
+    }
+    
     private var panInitialHeight: CGFloat?
+    private var maximumHeight: CGFloat = 0
+    private var minimumHeight: CGFloat = 0
     
     var delegate: PullUpControlViewDelegate?
-    var dataSource: PullUpControlViewDataSource?
+    var dataSource: PullUpControlViewDataSource? {
+        didSet {
+            maximumHeight = dataSource?.maximumHeightOfPullUpControlView(self) ?? 0
+            minimumHeight = dataSource?.minimumHeightOfPullUpControlView(self) ?? 0
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -41,13 +54,13 @@ class PullUpControlView: UIView, NibInstantiable {
     
     @objc private func handlePanGesture(_ gesture: UIPanGestureRecognizer) {
         guard let dataSource = dataSource else { return }
-        let panCurrentHeight = panInitialHeight ?? dataSource.heightOfSearchControlView(self)
+        let panCurrentHeight = panInitialHeight ?? dataSource.minimumHeightOfPullUpControlView(self)
         
         switch gesture.state {
         case .changed:
             calculateHeight(panCurrentHeight, with: gesture)
         case .ended:
-            panInitialHeight = frame.height
+            animate(with: gesture)
         default: return
         }
     }
@@ -58,6 +71,33 @@ class PullUpControlView: UIView, NibInstantiable {
         
         let yTranslation = (gesture.translation(in: self).y) * -1
         let yOffset = containerViewHeight - (panCurrentHeight + yTranslation)
-        delegate?.pullUpControlView(self, didPanned: containerViewHeight - yOffset)
+        let height = containerViewHeight - yOffset
+        
+        if isValidHeight(height) {
+            delegate?.pullUpControlView(self, didPanned: height, animated: false)
+        }
+    }
+    
+    private func isValidHeight(_ height: CGFloat) -> Bool {
+        return height <= maximumHeight && height >= minimumHeight
+    }
+    
+    private func animate(with gesture: UIPanGestureRecognizer) {
+        let control: Control = gesture.translation(in: self).y < 0 ? .pullUp : .pullDown
+        let height = frame.height
+        
+        var targetHeight: CGFloat = 0
+        switch control {
+        case .pullUp:
+            targetHeight = height >= minimumHeight + 50 ? maximumHeight : minimumHeight
+        case .pullDown:
+            targetHeight = height <= maximumHeight - 50 ? minimumHeight : maximumHeight
+        }
+        adjustHeight(to: targetHeight, animated: true)
+    }
+    
+    private func adjustHeight(to targetHeight: CGFloat, animated: Bool) {
+        delegate?.pullUpControlView(self, didPanned: targetHeight, animated: animated)
+        panInitialHeight = targetHeight
     }
 }
