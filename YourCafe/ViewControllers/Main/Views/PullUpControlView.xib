@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -13,25 +13,29 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PullUpControlView" customModule="YourCafe" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PullUpControlView" customModule="YourCafe" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iqk-nN-PVI">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
-                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h3b-cv-q4Q">
+                    <rect key="frame" x="163.66666666666666" y="26" width="48" height="7"/>
+                    <color key="backgroundColor" red="0.14117647058823529" green="0.16862745098039217" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="odA-mS-WBy"/>
+                        <constraint firstAttribute="height" constant="7" id="kPs-GZ-yi8"/>
+                        <constraint firstAttribute="width" constant="48" id="lj3-lc-h0B"/>
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="Iqk-nN-PVI" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="UZR-Xi-tkE"/>
-                <constraint firstItem="Iqk-nN-PVI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ZEl-Cx-N93"/>
-                <constraint firstItem="Iqk-nN-PVI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="dkF-TK-3z8"/>
+                <constraint firstItem="h3b-cv-q4Q" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="26" id="dIl-5I-5b1"/>
+                <constraint firstItem="h3b-cv-q4Q" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="vHC-xB-PF6"/>
             </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="138.40000000000001" y="153.37331334332833"/>
+            <connections>
+                <outlet property="pullUpIndicatorView" destination="h3b-cv-q4Q" id="qpY-r8-xpw"/>
+            </connections>
+            <point key="canvasLocation" x="138.40000000000001" y="152.47376311844079"/>
         </view>
     </objects>
 </document>

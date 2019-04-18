@@ -15,7 +15,7 @@ class MapViewController: UIViewController {
     private var pullUpControlView: PullUpControlView? = PullUpControlView.instantiateFromNib()
     private var pullUpControlViewHeightConstraint: NSLayoutConstraint?
     
-    private var pullUpControlViewHeight: CGFloat = 70
+    private var pullUpControlViewHeight: CGFloat = 59
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,8 +44,8 @@ class MapViewController: UIViewController {
         controlView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(controlView)
         
-        controlView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        controlView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        controlView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8).isActive = true
+        controlView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8).isActive = true
         controlView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         pullUpControlViewHeightConstraint = controlView.heightAnchor.constraint(equalToConstant: pullUpControlViewHeight)
         pullUpControlViewHeightConstraint?.isActive = true

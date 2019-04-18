@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2631418F02C93B17A1C259EC /* Pods_YourCafeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7141A9357086CB2034989C1 /* Pods_YourCafeTests.framework */; };
+		3E31C5C922689EB30025F087 /* UIView + cornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E31C5C822689EB30025F087 /* UIView + cornerRadius.swift */; };
 		3E6E66CB22588C7900341819 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E66CA22588C7900341819 /* MapViewController.swift */; };
 		3E6E66CD22588C8300341819 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E66CC22588C8300341819 /* DetailViewController.swift */; };
 		3E6E66CF22588C9700341819 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E66CE22588C9700341819 /* EditViewController.swift */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		2CA479EB762EC704A45420B7 /* Pods-YourCafe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YourCafe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YourCafe/Pods-YourCafe.debug.xcconfig"; sourceTree = "<group>"; };
+		3E31C5C822689EB30025F087 /* UIView + cornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + cornerRadius.swift"; sourceTree = "<group>"; };
 		3E6E66CA22588C7900341819 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		3E6E66CC22588C8300341819 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		3E6E66CE22588C9700341819 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +113,14 @@
 				745B3997AAE04F123A59F914 /* Pods_YourCafeUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3E31C5C722689EA50025F087 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3E31C5C822689EB30025F087 /* UIView + cornerRadius.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		3E6E66C122588BA200341819 /* ViewControllers */ = {
@@ -204,6 +214,7 @@
 		3ED39AFD2258869E009AB9AD /* YourCafe */ = {
 			isa = PBXGroup;
 			children = (
+				3E31C5C722689EA50025F087 /* Utils */,
 				3E6E66E22258B46F00341819 /* Protocols */,
 				3E6E66C922588C3700341819 /* Resources */,
 				3E6E66C122588BA200341819 /* ViewControllers */,
@@ -477,6 +488,7 @@
 			files = (
 				3E6E66E62258CAEC00341819 /* NibInstantiable.swift in Sources */,
 				3E6E66CF22588C9700341819 /* EditViewController.swift in Sources */,
+				3E31C5C922689EB30025F087 /* UIView + cornerRadius.swift in Sources */,
 				3E6E66CD22588C8300341819 /* DetailViewController.swift in Sources */,
 				3ED39AFF2258869E009AB9AD /* AppDelegate.swift in Sources */,
 				3E6E66CB22588C7900341819 /* MapViewController.swift in Sources */,
