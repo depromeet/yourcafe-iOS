@@ -29,6 +29,9 @@ class MapViewController: UIViewController {
         naverMapView.showLocationButton = true
         naverMapView.showZoomControls = false
         naverMapView.showCompass = false
+        naverMapView.showLocationButton = false
+        naverMapView.showScaleBar = false
+        naverMapView.mapView.logoAlign = .rightTop
     }
     
     private func setPullUpControlView() {
