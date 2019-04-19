@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bfz-4f-Lw9" customClass="NMFNaverMapView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
@@ -27,7 +27,7 @@
                         <constraints>
                             <constraint firstItem="Bfz-4f-Lw9" firstAttribute="leading" secondItem="cZZ-lq-SGR" secondAttribute="leading" id="6xe-Lv-M2G"/>
                             <constraint firstItem="cZZ-lq-SGR" firstAttribute="trailing" secondItem="Bfz-4f-Lw9" secondAttribute="trailing" id="pad-LU-KOp"/>
-                            <constraint firstItem="cZZ-lq-SGR" firstAttribute="bottom" secondItem="Bfz-4f-Lw9" secondAttribute="bottom" id="svM-M0-LWh"/>
+                            <constraint firstAttribute="bottom" secondItem="Bfz-4f-Lw9" secondAttribute="bottom" id="svM-M0-LWh"/>
                             <constraint firstItem="Bfz-4f-Lw9" firstAttribute="top" secondItem="X6l-Ca-Jnw" secondAttribute="top" id="uOl-U2-waw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cZZ-lq-SGR"/>

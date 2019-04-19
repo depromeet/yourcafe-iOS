@@ -29,6 +29,7 @@ class PullUpControlView: UIView, NibInstantiable {
         static let cornerRadius: CGFloat = 20
         static let indicatorViewCornerRadius: CGFloat = 3.5
         static let panGestureThreshold: CGFloat = 50
+        static let cornerRadiusBottomSafeArea: CGFloat = 20
     }
     
     // MARK:- Outlets
@@ -54,11 +55,6 @@ class PullUpControlView: UIView, NibInstantiable {
         setupPanGesture()
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        makeCornerRounded(corners: [.topLeft, .topRight], radius: PullUpControlView.UIMatrix.cornerRadius)
-    }
-    
     // MARK:- Setup
     private func setupView() {
         setupContentView()
@@ -67,7 +63,7 @@ class PullUpControlView: UIView, NibInstantiable {
     
     private func setupContentView() {
         layer.masksToBounds = true
-        backgroundColor = .white
+        layer.cornerRadius = 20 
     }
     
     private func setupPullUpIndicatorView() {

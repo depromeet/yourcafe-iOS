@@ -15,7 +15,8 @@ class MapViewController: UIViewController {
     private var pullUpControlView: PullUpControlView? = PullUpControlView.instantiateFromNib()
     private var pullUpControlViewHeightConstraint: NSLayoutConstraint?
     
-    private var pullUpControlViewHeight: CGFloat = 59
+    private var pullUpControlViewHeight: CGFloat = 59 + PullUpControlView.UIMatrix.cornerRadiusBottomSafeArea
+    private var pullUpControlViewMaximumHeightOffset: CGFloat = 96
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,11 +50,13 @@ class MapViewController: UIViewController {
         
         controlView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8).isActive = true
         controlView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8).isActive = true
-        controlView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        controlView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: PullUpControlView.UIMatrix.cornerRadiusBottomSafeArea).isActive = true
         pullUpControlViewHeightConstraint = controlView.heightAnchor.constraint(equalToConstant: pullUpControlViewHeight)
         pullUpControlViewHeightConstraint?.isActive = true
     }
 }
+
+// MARK:- PullUpControlViewDataSource
 
 extension MapViewController: PullUpControlViewDataSource {
     func heightOfContainerView(_ pullUpSearchControlView: PullUpControlView) -> CGFloat {
@@ -65,16 +68,18 @@ extension MapViewController: PullUpControlViewDataSource {
     }
     
     func maximumHeightOfPullUpControlView(_ pullUpControlView: PullUpControlView) -> CGFloat {
-        return 400
+        return view.frame.height - pullUpControlViewMaximumHeightOffset
     }
 }
+
+// MARK:- PullUpControlViewDelegate
 
 extension MapViewController: PullUpControlViewDelegate {
     func pullUpControlView(_ pullUpControlView: PullUpControlView, didPanned height: CGFloat, animated: Bool) {
         pullUpControlViewHeightConstraint?.constant = height
         
         if animated {
-            UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0, options: .curveEaseOut, animations: {
+            UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseOut, animations: {
                 self.view.layoutIfNeeded()
             }, completion: nil)
         }
