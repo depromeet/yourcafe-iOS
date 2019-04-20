@@ -5,6 +5,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>NanumSquareOTFR.otf</string>
+		<string>NanumSquareOTF_acEB.otf</string>
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>작업하기 좋은 카페를 안내받길 원한다면 위치 권한을 허용해주세요</string>

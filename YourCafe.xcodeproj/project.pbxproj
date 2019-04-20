@@ -20,6 +20,12 @@
 		3E6E66DD2258994F00341819 /* PullUpControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E66DC2258994F00341819 /* PullUpControlView.swift */; };
 		3E6E66DF2258995E00341819 /* PullUpControlView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E6E66DE2258995E00341819 /* PullUpControlView.xib */; };
 		3E6E66E62258CAEC00341819 /* NibInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E66E52258CAEC00341819 /* NibInstantiable.swift */; };
+		3E961225226AD55800EF21D6 /* PullUpControlTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E961224226AD55800EF21D6 /* PullUpControlTableViewHeader.swift */; };
+		3E961227226AD57C00EF21D6 /* PullUpControlTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E961226226AD57C00EF21D6 /* PullUpControlTableViewHeader.xib */; };
+		3E961229226AD61400EF21D6 /* NanumSquareOTF_acEB.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E961228226AD61400EF21D6 /* NanumSquareOTF_acEB.otf */; };
+		3E96122B226AD84200EF21D6 /* NSObject + reuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E96122A226AD84200EF21D6 /* NSObject + reuseIdentifier.swift */; };
+		3E96122F226B1DE100EF21D6 /* CollecitonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E96122D226B1DE100EF21D6 /* CollecitonTableViewCell.swift */; };
+		3E961230226B1DE100EF21D6 /* CollecitonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E96122E226B1DE100EF21D6 /* CollecitonTableViewCell.xib */; };
 		3ED39AFF2258869E009AB9AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED39AFE2258869E009AB9AD /* AppDelegate.swift */; };
 		3ED39B062258869F009AB9AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ED39B052258869F009AB9AD /* Assets.xcassets */; };
 		3ED39B092258869F009AB9AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ED39B072258869F009AB9AD /* LaunchScreen.storyboard */; };
@@ -60,6 +66,12 @@
 		3E6E66DC2258994F00341819 /* PullUpControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullUpControlView.swift; sourceTree = "<group>"; };
 		3E6E66DE2258995E00341819 /* PullUpControlView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PullUpControlView.xib; sourceTree = "<group>"; };
 		3E6E66E52258CAEC00341819 /* NibInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibInstantiable.swift; sourceTree = "<group>"; };
+		3E961224226AD55800EF21D6 /* PullUpControlTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullUpControlTableViewHeader.swift; sourceTree = "<group>"; };
+		3E961226226AD57C00EF21D6 /* PullUpControlTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PullUpControlTableViewHeader.xib; sourceTree = "<group>"; };
+		3E961228226AD61400EF21D6 /* NanumSquareOTF_acEB.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareOTF_acEB.otf; sourceTree = "<group>"; };
+		3E96122A226AD84200EF21D6 /* NSObject + reuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject + reuseIdentifier.swift"; sourceTree = "<group>"; };
+		3E96122D226B1DE100EF21D6 /* CollecitonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollecitonTableViewCell.swift; sourceTree = "<group>"; };
+		3E96122E226B1DE100EF21D6 /* CollecitonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollecitonTableViewCell.xib; sourceTree = "<group>"; };
 		3ED39AFB2258869E009AB9AD /* YourCafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourCafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ED39AFE2258869E009AB9AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3ED39B052258869F009AB9AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -124,6 +136,7 @@
 			children = (
 				3E31C5C822689EB30025F087 /* UIView + cornerRadius.swift */,
 				3E31C5CA22689FE90025F087 /* Style.swift */,
+				3E96122A226AD84200EF21D6 /* NSObject + reuseIdentifier.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -170,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				3E31C5CC2268A2040025F087 /* NanumSquareOTFR.otf */,
+				3E961228226AD61400EF21D6 /* NanumSquareOTF_acEB.otf */,
 				3ED39B0A2258869F009AB9AD /* Info.plist */,
 				3ED39AFE2258869E009AB9AD /* AppDelegate.swift */,
 				3ED39B052258869F009AB9AD /* Assets.xcassets */,
@@ -181,6 +195,7 @@
 		3E6E66D92258990100341819 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3E961223226AD50E00EF21D6 /* TableViewCells */,
 				3E6E66DC2258994F00341819 /* PullUpControlView.swift */,
 				3E6E66DE2258995E00341819 /* PullUpControlView.xib */,
 			);
@@ -193,6 +208,17 @@
 				3E6E66E52258CAEC00341819 /* NibInstantiable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		3E961223226AD50E00EF21D6 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				3E961224226AD55800EF21D6 /* PullUpControlTableViewHeader.swift */,
+				3E961226226AD57C00EF21D6 /* PullUpControlTableViewHeader.xib */,
+				3E96122D226B1DE100EF21D6 /* CollecitonTableViewCell.swift */,
+				3E96122E226B1DE100EF21D6 /* CollecitonTableViewCell.xib */,
+			);
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 		3ED39AF22258869E009AB9AD = {
@@ -367,7 +393,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E961227226AD57C00EF21D6 /* PullUpControlTableViewHeader.xib in Resources */,
+				3E961230226B1DE100EF21D6 /* CollecitonTableViewCell.xib in Resources */,
 				3E6E66D322588CEA00341819 /* DetailViewController.storyboard in Resources */,
+				3E961229226AD61400EF21D6 /* NanumSquareOTF_acEB.otf in Resources */,
 				3ED39B092258869F009AB9AD /* LaunchScreen.storyboard in Resources */,
 				3E31C5CD2268A2040025F087 /* NanumSquareOTFR.otf in Resources */,
 				3ED39B062258869F009AB9AD /* Assets.xcassets in Resources */,
@@ -493,10 +522,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E96122B226AD84200EF21D6 /* NSObject + reuseIdentifier.swift in Sources */,
 				3E6E66E62258CAEC00341819 /* NibInstantiable.swift in Sources */,
 				3E6E66CF22588C9700341819 /* EditViewController.swift in Sources */,
 				3E31C5C922689EB30025F087 /* UIView + cornerRadius.swift in Sources */,
 				3E6E66CD22588C8300341819 /* DetailViewController.swift in Sources */,
+				3E961225226AD55800EF21D6 /* PullUpControlTableViewHeader.swift in Sources */,
+				3E96122F226B1DE100EF21D6 /* CollecitonTableViewCell.swift in Sources */,
 				3ED39AFF2258869E009AB9AD /* AppDelegate.swift in Sources */,
 				3E6E66CB22588C7900341819 /* MapViewController.swift in Sources */,
 				3E6E66DD2258994F00341819 /* PullUpControlView.swift in Sources */,
