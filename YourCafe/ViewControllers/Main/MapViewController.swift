@@ -10,19 +10,37 @@ import UIKit
 import NMapsMap
 
 class MapViewController: UIViewController {
+    // MARK:- Outlets
+    @IBOutlet weak var searchContainerView: UIView!
+    @IBOutlet weak var slideMenuButton: UIButton!
+    @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var naverMapView: NMFNaverMapView!
     
-    private var pullUpControlView: PullUpControlView? = PullUpControlView.instantiateFromNib()
+    private var pullUpControlView: PullUpControlView?
     private var pullUpControlViewHeightConstraint: NSLayoutConstraint?
     
-    private var pullUpControlViewHeight: CGFloat = 59 + PullUpControlView.UIMatrix.cornerRadiusBottomSafeArea
+    // MARK:- Constraints
+    private var pullUpControlViewHeight: CGFloat = 79 + PullUpControlView.UIMatrix.cornerRadiusBottomSafeArea
     private var pullUpControlViewMaximumHeightOffset: CGFloat = 96
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setupMapView()
+        setupViews()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        guard pullUpControlView == nil else { return }
+        pullUpControlView = PullUpControlView.instantiateFromNib()
         setPullUpControlView()
+    }
+}
+
+// MARK:- Setup & Layout Views
+extension MapViewController {
+    private func setupViews() {
+        setupMapView()
+        setupSearchContainerView()
     }
     
     private func setupMapView() {
@@ -32,7 +50,12 @@ class MapViewController: UIViewController {
         naverMapView.showCompass = false
         naverMapView.showLocationButton = false
         naverMapView.showScaleBar = false
-        naverMapView.mapView.logoAlign = .rightTop
+        naverMapView.mapView.logoAlign = .leftTop
+    }
+    
+    private func setupSearchContainerView() {
+        searchContainerView.layer.cornerRadius = 10
+        searchContainerView.layer.masksToBounds = true
     }
     
     private func setPullUpControlView() {
@@ -48,8 +71,8 @@ class MapViewController: UIViewController {
         controlView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(controlView)
         
-        controlView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8).isActive = true
-        controlView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8).isActive = true
+        controlView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 13).isActive = true
+        controlView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -13).isActive = true
         controlView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: PullUpControlView.UIMatrix.cornerRadiusBottomSafeArea).isActive = true
         pullUpControlViewHeightConstraint = controlView.heightAnchor.constraint(equalToConstant: pullUpControlViewHeight)
         pullUpControlViewHeightConstraint?.isActive = true
@@ -68,7 +91,9 @@ extension MapViewController: PullUpControlViewDataSource {
     }
     
     func maximumHeightOfPullUpControlView(_ pullUpControlView: PullUpControlView) -> CGFloat {
-        return view.frame.height - pullUpControlViewMaximumHeightOffset
+        let searchContainerViewHeight = searchContainerView.frame.height
+        let serachContainerViewMiY = searchContainerView.frame.minY
+        return view.frame.height - (searchContainerViewHeight + serachContainerViewMiY) + PullUpControlView.UIMatrix.cornerRadiusBottomSafeArea
     }
 }
 
@@ -80,6 +105,7 @@ extension MapViewController: PullUpControlViewDelegate {
         
         if animated {
             UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseOut, animations: {
+                self.searchContainerView.alpha = height == self.pullUpControlViewHeight ? 1 : 0
                 self.view.layoutIfNeeded()
             }, completion: nil)
         }

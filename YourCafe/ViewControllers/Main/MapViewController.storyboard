@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NkU-7U-bML">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -9,35 +9,95 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NanumSquareOTFR.otf">
+            <string>NanumSquareOTF_acR</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Map View Controller-->
         <scene sceneID="uAE-iJ-5Td">
             <objects>
                 <viewController id="NkU-7U-bML" customClass="MapViewController" customModule="YourCafe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X6l-Ca-Jnw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bfz-4f-Lw9" customClass="NMFNaverMapView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zex-tF-kCo">
+                                <rect key="frame" x="13" y="63" width="388" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z75-3y-kEG">
+                                        <rect key="frame" x="24" y="14" width="21" height="22"/>
+                                        <state key="normal" image="iconHamburger"/>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="주소, 카페명 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6lR-2o-WSq">
+                                        <rect key="frame" x="69" y="15.666666666666671" width="119.66666666666669" height="19"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareOTF_acR" family="NanumSquareOTF_ac" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="6lR-2o-WSq" firstAttribute="centerY" secondItem="Zex-tF-kCo" secondAttribute="centerY" id="2G5-hN-ZZF"/>
+                                    <constraint firstItem="z75-3y-kEG" firstAttribute="centerY" secondItem="Zex-tF-kCo" secondAttribute="centerY" id="4uv-6j-BXQ"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6lR-2o-WSq" secondAttribute="trailing" id="LLA-Es-df9"/>
+                                    <constraint firstItem="6lR-2o-WSq" firstAttribute="leading" secondItem="z75-3y-kEG" secondAttribute="trailing" constant="24" id="NTU-no-Wnk"/>
+                                    <constraint firstAttribute="height" constant="50" id="Smu-yK-yUi"/>
+                                    <constraint firstItem="z75-3y-kEG" firstAttribute="leading" secondItem="Zex-tF-kCo" secondAttribute="leading" constant="24" id="bWg-sk-Nsk"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p4Z-XY-qfr">
+                                <rect key="frame" x="338" y="127" width="76" height="76"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="76" id="RIf-tl-7sQ"/>
+                                    <constraint firstAttribute="width" constant="76" id="wHp-8s-PYE"/>
+                                </constraints>
+                                <state key="normal" image="iconCurrentLocation"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VK3-ng-Ccb">
+                                <rect key="frame" x="338" y="203" width="76" height="76"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="76" id="gLJ-lT-zSQ"/>
+                                    <constraint firstAttribute="width" constant="76" id="xct-wo-taw"/>
+                                </constraints>
+                                <state key="normal" image="iconPinAdd"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="cZZ-lq-SGR" firstAttribute="trailing" secondItem="VK3-ng-Ccb" secondAttribute="trailing" id="3UQ-YY-w0m"/>
                             <constraint firstItem="Bfz-4f-Lw9" firstAttribute="leading" secondItem="cZZ-lq-SGR" secondAttribute="leading" id="6xe-Lv-M2G"/>
+                            <constraint firstItem="cZZ-lq-SGR" firstAttribute="trailing" secondItem="Zex-tF-kCo" secondAttribute="trailing" constant="13" id="B62-QV-cpO"/>
+                            <constraint firstItem="VK3-ng-Ccb" firstAttribute="top" secondItem="p4Z-XY-qfr" secondAttribute="bottom" id="HNH-Nm-V9R"/>
+                            <constraint firstItem="Zex-tF-kCo" firstAttribute="leading" secondItem="cZZ-lq-SGR" secondAttribute="leading" constant="13" id="NSO-DX-bb1"/>
+                            <constraint firstItem="p4Z-XY-qfr" firstAttribute="top" secondItem="Zex-tF-kCo" secondAttribute="bottom" constant="14" id="TnH-sy-vp0"/>
+                            <constraint firstItem="cZZ-lq-SGR" firstAttribute="trailing" secondItem="p4Z-XY-qfr" secondAttribute="trailing" id="kVe-nd-3gM"/>
                             <constraint firstItem="cZZ-lq-SGR" firstAttribute="trailing" secondItem="Bfz-4f-Lw9" secondAttribute="trailing" id="pad-LU-KOp"/>
                             <constraint firstAttribute="bottom" secondItem="Bfz-4f-Lw9" secondAttribute="bottom" id="svM-M0-LWh"/>
                             <constraint firstItem="Bfz-4f-Lw9" firstAttribute="top" secondItem="X6l-Ca-Jnw" secondAttribute="top" id="uOl-U2-waw"/>
+                            <constraint firstItem="Zex-tF-kCo" firstAttribute="top" secondItem="cZZ-lq-SGR" secondAttribute="top" constant="43" id="uz2-es-H6c"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cZZ-lq-SGR"/>
                     </view>
                     <connections>
                         <outlet property="naverMapView" destination="Bfz-4f-Lw9" id="voc-An-CBR"/>
+                        <outlet property="searchContainerView" destination="Zex-tF-kCo" id="m66-LG-Q1K"/>
+                        <outlet property="searchTextField" destination="6lR-2o-WSq" id="S2J-RK-t0a"/>
+                        <outlet property="slideMenuButton" destination="z75-3y-kEG" id="aSi-ur-3q6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VzI-PB-wCs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="iconCurrentLocation" width="76" height="76"/>
+        <image name="iconHamburger" width="21.666666030883789" height="15.666666984558105"/>
+        <image name="iconPinAdd" width="76" height="76"/>
+    </resources>
 </document>
