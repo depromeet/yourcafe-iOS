@@ -62,12 +62,47 @@ class PullUpControlView: UIView, NibInstantiable {
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.backgroundColor = .white
+        tableView.showsVerticalScrollIndicator = false
+
+        registerCells()
+        setupTableViewCellHeight()
+    }
+    
+    private func registerCells() {
         tableView.register(UINib(nibName: PullUpControlTableViewHeader.reuseIdentifier, bundle: nil), forHeaderFooterViewReuseIdentifier: PullUpControlTableViewHeader.reuseIdentifier)
+        tableView.register(UINib(nibName: OptionCollectionTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: OptionCollectionTableViewCell.reuseIdentifier)
+        tableView.register(UINib(nibName: TagCollectionTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: TagCollectionTableViewCell.reuseIdentifier)
+    }
+    
+    private func setupTableViewCellHeight() {
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 100
     }
 }
 
-// MARK:- TableView
-extension PullUpControlView: UITableViewDelegate {
+// MARK:- UITableViewDelegate
+
+extension PullUpControlView: UITableViewDelegate { }
+
+// MARK:- UITableViewDataSource
+
+extension PullUpControlView: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let section = indexPath.section
+        let identifier = section == 0 ? OptionCollectionTableViewCell.reuseIdentifier : TagCollectionTableViewCell.reuseIdentifier
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
+        return section == 0 ? cell as! OptionCollectionTableViewCell : cell as! TagCollectionTableViewCell
+    }
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: PullUpControlTableViewHeader.reuseIdentifier) as! PullUpControlTableViewHeader
         headerView.titleLabel.text = headerTitle[section]
@@ -76,20 +111,6 @@ extension PullUpControlView: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return PullUpControlTableViewHeader.UIMatrix.height
-    }
-}
-
-extension PullUpControlView: UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
     }
 }
 
