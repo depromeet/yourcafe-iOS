@@ -52,31 +52,31 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p4Z-XY-qfr">
-                                <rect key="frame" x="338" y="127" width="76" height="76"/>
+                                <rect key="frame" x="355" y="127" width="55" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="76" id="RIf-tl-7sQ"/>
-                                    <constraint firstAttribute="width" constant="76" id="wHp-8s-PYE"/>
+                                    <constraint firstAttribute="height" constant="55" id="RIf-tl-7sQ"/>
+                                    <constraint firstAttribute="width" constant="55" id="wHp-8s-PYE"/>
                                 </constraints>
                                 <state key="normal" image="iconCurrentLocation"/>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VK3-ng-Ccb">
-                                <rect key="frame" x="338" y="203" width="76" height="76"/>
+                                <rect key="frame" x="355" y="182" width="55" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="76" id="gLJ-lT-zSQ"/>
-                                    <constraint firstAttribute="width" constant="76" id="xct-wo-taw"/>
+                                    <constraint firstAttribute="height" constant="55" id="gLJ-lT-zSQ"/>
+                                    <constraint firstAttribute="width" constant="55" id="xct-wo-taw"/>
                                 </constraints>
                                 <state key="normal" image="iconPinAdd"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="cZZ-lq-SGR" firstAttribute="trailing" secondItem="VK3-ng-Ccb" secondAttribute="trailing" id="3UQ-YY-w0m"/>
+                            <constraint firstItem="cZZ-lq-SGR" firstAttribute="trailing" secondItem="VK3-ng-Ccb" secondAttribute="trailing" constant="4" id="3UQ-YY-w0m"/>
                             <constraint firstItem="Bfz-4f-Lw9" firstAttribute="leading" secondItem="cZZ-lq-SGR" secondAttribute="leading" id="6xe-Lv-M2G"/>
                             <constraint firstItem="cZZ-lq-SGR" firstAttribute="trailing" secondItem="Zex-tF-kCo" secondAttribute="trailing" constant="13" id="B62-QV-cpO"/>
                             <constraint firstItem="VK3-ng-Ccb" firstAttribute="top" secondItem="p4Z-XY-qfr" secondAttribute="bottom" id="HNH-Nm-V9R"/>
                             <constraint firstItem="Zex-tF-kCo" firstAttribute="leading" secondItem="cZZ-lq-SGR" secondAttribute="leading" constant="13" id="NSO-DX-bb1"/>
                             <constraint firstItem="p4Z-XY-qfr" firstAttribute="top" secondItem="Zex-tF-kCo" secondAttribute="bottom" constant="14" id="TnH-sy-vp0"/>
-                            <constraint firstItem="cZZ-lq-SGR" firstAttribute="trailing" secondItem="p4Z-XY-qfr" secondAttribute="trailing" id="kVe-nd-3gM"/>
+                            <constraint firstItem="cZZ-lq-SGR" firstAttribute="trailing" secondItem="p4Z-XY-qfr" secondAttribute="trailing" constant="4" id="kVe-nd-3gM"/>
                             <constraint firstItem="cZZ-lq-SGR" firstAttribute="trailing" secondItem="Bfz-4f-Lw9" secondAttribute="trailing" id="pad-LU-KOp"/>
                             <constraint firstAttribute="bottom" secondItem="Bfz-4f-Lw9" secondAttribute="bottom" id="svM-M0-LWh"/>
                             <constraint firstItem="Bfz-4f-Lw9" firstAttribute="top" secondItem="X6l-Ca-Jnw" secondAttribute="top" id="uOl-U2-waw"/>
