@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NanumSquareOTFR.otf">
+            <string>NanumSquareOTF_acR</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="OptionCollectionViewCell" customModule="YourCafe" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="184" height="271"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="184" height="271"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TQt-Rv-qRE">
+                        <rect key="frame" x="0.0" y="0.0" width="184" height="271"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9UP-N2-kbO">
+                                <rect key="frame" x="0.0" y="0.0" width="184" height="184"/>
+                                <color key="backgroundColor" red="0.64313725489999995" green="0.64313725489999995" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9UP-N2-kbO" secondAttribute="height" multiplier="1:1" id="JR9-u4-8bN"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주차장" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQc-YM-5Cd">
+                                <rect key="frame" x="0.0" y="192.5" width="184" height="14.5"/>
+                                <fontDescription key="fontDescription" name="NanumSquareOTF_acR" family="NanumSquareOTF_ac" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qQc-YM-5Cd" firstAttribute="top" secondItem="9UP-N2-kbO" secondAttribute="bottom" constant="8.5" id="1Mh-ik-Gly"/>
+                            <constraint firstAttribute="trailing" secondItem="9UP-N2-kbO" secondAttribute="trailing" id="DTS-qC-Ggc"/>
+                            <constraint firstAttribute="trailing" secondItem="qQc-YM-5Cd" secondAttribute="trailing" id="Is1-KM-iif"/>
+                            <constraint firstItem="9UP-N2-kbO" firstAttribute="top" secondItem="TQt-Rv-qRE" secondAttribute="top" id="MAN-DX-etS"/>
+                            <constraint firstItem="qQc-YM-5Cd" firstAttribute="leading" secondItem="TQt-Rv-qRE" secondAttribute="leading" id="dz6-Qz-AdY"/>
+                            <constraint firstItem="9UP-N2-kbO" firstAttribute="leading" secondItem="TQt-Rv-qRE" secondAttribute="leading" id="gaw-aI-qHO"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="TQt-Rv-qRE" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="YFn-fY-0Hj"/>
+                <constraint firstAttribute="trailing" secondItem="TQt-Rv-qRE" secondAttribute="trailing" id="k8V-BE-Mir"/>
+                <constraint firstAttribute="bottom" secondItem="TQt-Rv-qRE" secondAttribute="bottom" id="oJ7-6M-RDl"/>
+                <constraint firstItem="TQt-Rv-qRE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="vz4-wk-7Jf"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="184" height="271"/>
+            <connections>
+                <outlet property="imageView" destination="9UP-N2-kbO" id="3xB-NV-EgS"/>
+                <outlet property="opitonLabel" destination="qQc-YM-5Cd" id="1r2-Mb-9ZC"/>
+            </connections>
+            <point key="canvasLocation" x="160" y="147.97601199400302"/>
+        </collectionViewCell>
+    </objects>
+</document>
