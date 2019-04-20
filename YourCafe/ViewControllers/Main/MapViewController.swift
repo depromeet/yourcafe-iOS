@@ -19,6 +19,8 @@ class MapViewController: UIViewController {
     private var pullUpControlView: PullUpControlView?
     private var pullUpControlViewHeightConstraint: NSLayoutConstraint?
     
+    private var locationManager = CLLocationManager()
+    
     // MARK:- Constraints
     private var pullUpControlViewHeight: CGFloat = 79 + PullUpControlView.UIMatrix.cornerRadiusBottomSafeArea
     private var pullUpControlViewMaximumHeightOffset: CGFloat = 96
@@ -26,6 +28,7 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        moveMapCameraToCurrentLocation()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -33,6 +36,11 @@ class MapViewController: UIViewController {
         guard pullUpControlView == nil else { return }
         pullUpControlView = PullUpControlView.instantiateFromNib()
         setPullUpControlView()
+    }
+    
+    private func moveMapCameraToCurrentLocation() {
+        guard let currentCoordinate = locationManager.location?.coordinate else { return }
+        naverMapView.mapView.moveCamera(NMFCameraUpdate(scrollTo: NMGLatLng(from: currentCoordinate)))
     }
 }
 
