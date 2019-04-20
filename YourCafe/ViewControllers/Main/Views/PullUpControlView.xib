@@ -1,51 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PullUpControlView" customModule="YourCafe" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PullUpControlView" customModule="YourCafe" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <rect key="frame" x="0.0" y="0.0" width="475" height="543"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h3b-cv-q4Q">
-                    <rect key="frame" x="163.66666666666666" y="26" width="48" height="7"/>
+                    <rect key="frame" x="213.66666666666666" y="26" width="47.999999999999972" height="7"/>
                     <color key="backgroundColor" red="0.14117647058823529" green="0.16862745098039217" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="7" id="kPs-GZ-yi8"/>
                         <constraint firstAttribute="width" constant="48" id="lj3-lc-h0B"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sPY-bt-rh6">
-                    <rect key="frame" x="0.0" y="792" width="375" height="20"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sPY-bt-rh6" userLabel="offSetView">
+                    <rect key="frame" x="0.0" y="523" width="475" height="20"/>
                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="kOn-Kd-DWz"/>
                     </constraints>
                 </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aij-rh-Svk">
+                    <rect key="frame" x="21" y="89" width="433" height="434"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="sPY-bt-rh6" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="XKg-pV-rK8"/>
+                <constraint firstItem="aij-rh-Svk" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="21" id="0Uj-Hl-yCC"/>
+                <constraint firstItem="sPY-bt-rh6" firstAttribute="top" secondItem="aij-rh-Svk" secondAttribute="bottom" id="Ud1-n4-7LU"/>
+                <constraint firstItem="sPY-bt-rh6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="XKg-pV-rK8"/>
                 <constraint firstAttribute="bottom" secondItem="sPY-bt-rh6" secondAttribute="bottom" id="a4h-Rf-MHd"/>
                 <constraint firstItem="h3b-cv-q4Q" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="26" id="dIl-5I-5b1"/>
-                <constraint firstItem="sPY-bt-rh6" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="jo8-EJ-bGJ"/>
+                <constraint firstItem="sPY-bt-rh6" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="jo8-EJ-bGJ"/>
+                <constraint firstAttribute="trailing" secondItem="aij-rh-Svk" secondAttribute="trailing" constant="21" id="laO-Fb-uCH"/>
+                <constraint firstItem="aij-rh-Svk" firstAttribute="top" secondItem="h3b-cv-q4Q" secondAttribute="bottom" constant="56" id="u5u-oy-ixe"/>
                 <constraint firstItem="h3b-cv-q4Q" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="vHC-xB-PF6"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="pullUpIndicatorView" destination="h3b-cv-q4Q" id="qpY-r8-xpw"/>
+                <outlet property="tableView" destination="aij-rh-Svk" id="9rF-3L-THt"/>
             </connections>
-            <point key="canvasLocation" x="138.40000000000001" y="152.21674876847291"/>
+            <point key="canvasLocation" x="216.80000000000001" y="423.02955665024632"/>
         </view>
     </objects>
 </document>

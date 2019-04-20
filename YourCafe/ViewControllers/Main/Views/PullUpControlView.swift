@@ -34,11 +34,14 @@ class PullUpControlView: UIView, NibInstantiable {
     
     // MARK:- Outlets
     @IBOutlet weak var pullUpIndicatorView: UIView!
+    @IBOutlet weak var tableView: UITableView!
     
     // MARK:- Properties
     private var panInitialHeight: CGFloat?
     private var maximumHeight: CGFloat = 0
     private var minimumHeight: CGFloat = 0
+    
+    private var headerTitle: [String] = ["원하시는 설정을 선택해주세요", "태그를 선택해주세요"]
     
     var delegate: PullUpControlViewDelegate?
     var dataSource: PullUpControlViewDataSource? {
@@ -52,10 +55,47 @@ class PullUpControlView: UIView, NibInstantiable {
     override func awakeFromNib() {
         super.awakeFromNib()
         setupView()
+        setupTableView()
         setupPanGesture()
     }
     
-    // MARK:- Setup
+    private func setupTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UINib(nibName: PullUpControlTableViewHeader.reuseIdentifier, bundle: nil), forHeaderFooterViewReuseIdentifier: PullUpControlTableViewHeader.reuseIdentifier)
+    }
+}
+
+// MARK:- TableView
+extension PullUpControlView: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: PullUpControlTableViewHeader.reuseIdentifier) as! PullUpControlTableViewHeader
+        headerView.titleLabel.text = headerTitle[section]
+        return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return PullUpControlTableViewHeader.UIMatrix.height
+    }
+}
+
+extension PullUpControlView: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+}
+
+
+// MARK:- Setup & Layout Views
+extension PullUpControlView {
     private func setupView() {
         setupContentView()
         setupPullUpIndicatorView()
@@ -63,14 +103,17 @@ class PullUpControlView: UIView, NibInstantiable {
     
     private func setupContentView() {
         layer.masksToBounds = true
-        layer.cornerRadius = 20 
+        layer.cornerRadius = 20
     }
     
     private func setupPullUpIndicatorView() {
         pullUpIndicatorView.layer.cornerRadius = PullUpControlView.UIMatrix.indicatorViewCornerRadius
         pullUpIndicatorView.layer.masksToBounds = true
     }
-    
+}
+
+// MARK:- Handle PanGesture
+extension PullUpControlView {
     private func setupPanGesture() {
         addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture)))
     }
@@ -88,10 +131,7 @@ class PullUpControlView: UIView, NibInstantiable {
         default: return
         }
     }
-}
-
-// MARK:- Handle PanGesture
-extension PullUpControlView {
+    
     private func calculateHeight(_ panCurrentHeight: CGFloat, with gesture: UIPanGestureRecognizer) {
         guard let dataSource = dataSource else { return }
         let containerViewHeight = dataSource.heightOfContainerView(self)
