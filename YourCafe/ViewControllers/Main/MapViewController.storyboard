@@ -42,21 +42,21 @@
                                         <rect key="frame" x="24" y="14" width="21" height="22"/>
                                         <state key="normal" image="iconHamburger"/>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="주소, 카페명 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6lR-2o-WSq">
-                                        <rect key="frame" x="69" y="15.666666666666671" width="119.66666666666669" height="19"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="주소, 카페명 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6lR-2o-WSq">
+                                        <rect key="frame" x="69" y="15.666666666666671" width="319" height="19"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="NanumSquareOTF_acR" family="NanumSquareOTF_ac" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="search"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="6lR-2o-WSq" firstAttribute="centerY" secondItem="Zex-tF-kCo" secondAttribute="centerY" id="2G5-hN-ZZF"/>
                                     <constraint firstItem="z75-3y-kEG" firstAttribute="centerY" secondItem="Zex-tF-kCo" secondAttribute="centerY" id="4uv-6j-BXQ"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6lR-2o-WSq" secondAttribute="trailing" id="LLA-Es-df9"/>
                                     <constraint firstItem="6lR-2o-WSq" firstAttribute="leading" secondItem="z75-3y-kEG" secondAttribute="trailing" constant="24" id="NTU-no-Wnk"/>
                                     <constraint firstAttribute="height" constant="50" id="Smu-yK-yUi"/>
                                     <constraint firstItem="z75-3y-kEG" firstAttribute="leading" secondItem="Zex-tF-kCo" secondAttribute="leading" constant="24" id="bWg-sk-Nsk"/>
+                                    <constraint firstAttribute="trailing" secondItem="6lR-2o-WSq" secondAttribute="trailing" id="sVe-qm-DxH"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p4Z-XY-qfr">

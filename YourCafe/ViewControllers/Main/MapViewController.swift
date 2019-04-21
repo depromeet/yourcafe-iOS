@@ -30,6 +30,7 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
         setupViews()
         moveMapCameraToCurrentLocation()
+        handleKeyboardHide()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -42,6 +43,29 @@ class MapViewController: UIViewController {
     private func moveMapCameraToCurrentLocation() {
         guard let currentCoordinate = locationManager.location?.coordinate else { return }
         naverMapView.mapView.moveCamera(NMFCameraUpdate(scrollTo: NMGLatLng(from: currentCoordinate)))
+    }
+}
+
+extension MapViewController: UITextFieldDelegate {
+    private func handleKeyboardHide() {
+        bluerEffectView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleBlurViewTap)))
+        searchTextField.delegate = self
+    }
+    
+    @objc func handleBlurViewTap() {
+        bluerEffectView.isHidden = true
+        searchTextField.text = ""
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        bluerEffectView.isHidden = false
+        return true
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        bluerEffectView.isHidden = true
+        view.endEditing(true)
+        return true
     }
 }
 
