@@ -12,6 +12,14 @@
 		3E31C5CB22689FE90025F087 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E31C5CA22689FE90025F087 /* Style.swift */; };
 		3E31C5CD2268A2040025F087 /* NanumSquareOTFR.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E31C5CC2268A2040025F087 /* NanumSquareOTFR.otf */; };
 		3E32E6F9226C14ED00737F8D /* FilterItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E32E6F8226C14ED00737F8D /* FilterItem.swift */; };
+		3E32E6FB226C309400737F8D /* Cafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E32E6FA226C309400737F8D /* Cafe.swift */; };
+		3E32E6FE226C643E00737F8D /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E32E6FD226C643E00737F8D /* MenuViewController.swift */; };
+		3E32E700226C644A00737F8D /* MenuViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E32E6FF226C644A00737F8D /* MenuViewController.storyboard */; };
+		3E32E707226C655D00737F8D /* MenuTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E32E706226C655D00737F8D /* MenuTableViewHeader.swift */; };
+		3E32E709226C656F00737F8D /* MenuTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E32E708226C656F00737F8D /* MenuTableViewHeader.xib */; };
+		3E32E70C226C67B900737F8D /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E32E70B226C67B900737F8D /* MenuTableViewCell.swift */; };
+		3E32E70E226C67C200737F8D /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E32E70D226C67C200737F8D /* MenuTableViewCell.xib */; };
+		3E32E711226C734800737F8D /* MenuSlideTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E32E710226C734800737F8D /* MenuSlideTransition.swift */; };
 		3E6E66CB22588C7900341819 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E66CA22588C7900341819 /* MapViewController.swift */; };
 		3E6E66CD22588C8300341819 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E66CC22588C8300341819 /* DetailViewController.swift */; };
 		3E6E66CF22588C9700341819 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E66CE22588C9700341819 /* EditViewController.swift */; };
@@ -67,6 +75,14 @@
 		3E31C5CA22689FE90025F087 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		3E31C5CC2268A2040025F087 /* NanumSquareOTFR.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareOTFR.otf; sourceTree = "<group>"; };
 		3E32E6F8226C14ED00737F8D /* FilterItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterItem.swift; sourceTree = "<group>"; };
+		3E32E6FA226C309400737F8D /* Cafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cafe.swift; sourceTree = "<group>"; };
+		3E32E6FD226C643E00737F8D /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		3E32E6FF226C644A00737F8D /* MenuViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuViewController.storyboard; sourceTree = "<group>"; };
+		3E32E706226C655D00737F8D /* MenuTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewHeader.swift; sourceTree = "<group>"; };
+		3E32E708226C656F00737F8D /* MenuTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewHeader.xib; sourceTree = "<group>"; };
+		3E32E70B226C67B900737F8D /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		3E32E70D226C67C200737F8D /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
+		3E32E710226C734800737F8D /* MenuSlideTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSlideTransition.swift; sourceTree = "<group>"; };
 		3E6E66CA22588C7900341819 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		3E6E66CC22588C8300341819 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		3E6E66CE22588C9700341819 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
@@ -164,13 +180,53 @@
 			isa = PBXGroup;
 			children = (
 				3E32E6F8226C14ED00737F8D /* FilterItem.swift */,
+				3E32E6FA226C309400737F8D /* Cafe.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		3E32E6FC226C642800737F8D /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				3E32E701226C64DB00737F8D /* Views */,
+				3E32E6FD226C643E00737F8D /* MenuViewController.swift */,
+				3E32E6FF226C644A00737F8D /* MenuViewController.storyboard */,
+				3E32E710226C734800737F8D /* MenuSlideTransition.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		3E32E701226C64DB00737F8D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3E32E704226C652700737F8D /* TableViewCells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3E32E704226C652700737F8D /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				3E32E705226C653300737F8D /* Headers */,
+				3E32E70B226C67B900737F8D /* MenuTableViewCell.swift */,
+				3E32E70D226C67C200737F8D /* MenuTableViewCell.xib */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		3E32E705226C653300737F8D /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				3E32E706226C655D00737F8D /* MenuTableViewHeader.swift */,
+				3E32E708226C656F00737F8D /* MenuTableViewHeader.xib */,
+			);
+			path = Headers;
 			sourceTree = "<group>";
 		};
 		3E6E66C122588BA200341819 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				3E32E6FC226C642800737F8D /* Menu */,
 				3E6E66C622588C0200341819 /* Edit */,
 				3E6E66C522588BFA00341819 /* Detail */,
 				3E6E66C422588BC200341819 /* Main */,
@@ -460,10 +516,13 @@
 				3E31C5CD2268A2040025F087 /* NanumSquareOTFR.otf in Resources */,
 				3ED39B062258869F009AB9AD /* Assets.xcassets in Resources */,
 				3E6E66D122588CAB00341819 /* MapViewController.storyboard in Resources */,
+				3E32E700226C644A00737F8D /* MenuViewController.storyboard in Resources */,
 				3E6E66DF2258995E00341819 /* PullUpControlView.xib in Resources */,
 				3E961241226B39B200EF21D6 /* TagCollectionTableViewCell.xib in Resources */,
+				3E32E709226C656F00737F8D /* MenuTableViewHeader.xib in Resources */,
 				3E961238226B1F6000EF21D6 /* TagCollectionViewCell.xib in Resources */,
 				3E961234226B1F5000EF21D6 /* FilterCollectionViewCell.xib in Resources */,
+				3E32E70E226C67C200737F8D /* MenuTableViewCell.xib in Resources */,
 				3E6E66D622588D1400341819 /* EditViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -586,17 +645,22 @@
 			files = (
 				3E961243226B4B8700EF21D6 /* LeftAlignedCollectionViewFlowLayout.swift in Sources */,
 				3E32E6F9226C14ED00737F8D /* FilterItem.swift in Sources */,
+				3E32E70C226C67B900737F8D /* MenuTableViewCell.swift in Sources */,
 				3E96122B226AD84200EF21D6 /* NSObject + reuseIdentifier.swift in Sources */,
 				3E6E66E62258CAEC00341819 /* NibInstantiable.swift in Sources */,
 				3E6E66CF22588C9700341819 /* EditViewController.swift in Sources */,
+				3E32E707226C655D00737F8D /* MenuTableViewHeader.swift in Sources */,
 				3E96123D226B386E00EF21D6 /* DynamicHeightCollectionView.swift in Sources */,
 				3E31C5C922689EB30025F087 /* UIView + cornerRadius.swift in Sources */,
 				3E961237226B1F6000EF21D6 /* TagCollectionViewCell.swift in Sources */,
+				3E32E6FB226C309400737F8D /* Cafe.swift in Sources */,
 				3E6E66CD22588C8300341819 /* DetailViewController.swift in Sources */,
 				3E961240226B39B200EF21D6 /* TagCollectionTableViewCell.swift in Sources */,
 				3E961233226B1F5000EF21D6 /* FilterCollectionViewCell.swift in Sources */,
 				3E961225226AD55800EF21D6 /* PullUpControlTableViewHeader.swift in Sources */,
+				3E32E711226C734800737F8D /* MenuSlideTransition.swift in Sources */,
 				3E96122F226B1DE100EF21D6 /* FilterCollectionTableViewCell.swift in Sources */,
+				3E32E6FE226C643E00737F8D /* MenuViewController.swift in Sources */,
 				3ED39AFF2258869E009AB9AD /* AppDelegate.swift in Sources */,
 				3E6E66CB22588C7900341819 /* MapViewController.swift in Sources */,
 				3E6E66DD2258994F00341819 /* PullUpControlView.swift in Sources */,
