@@ -11,6 +11,7 @@ import NMapsMap
 
 class MapViewController: UIViewController {
     // MARK:- Outlets
+    @IBOutlet weak var bluerEffectView: UIVisualEffectView!
     @IBOutlet weak var searchContainerView: UIView!
     @IBOutlet weak var slideMenuButton: UIButton!
     @IBOutlet weak var searchTextField: UITextField!
@@ -112,7 +113,8 @@ extension MapViewController: PullUpControlViewDelegate {
         pullUpControlViewHeightConstraint?.constant = height
         
         if animated {
-            UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseOut, animations: {
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseOut, animations: {
+                self.bluerEffectView.isHidden = !self.bluerEffectView.isHidden
                 self.searchContainerView.alpha = height == self.pullUpControlViewHeight ? 1 : 0
                 self.view.layoutIfNeeded()
             }, completion: nil)

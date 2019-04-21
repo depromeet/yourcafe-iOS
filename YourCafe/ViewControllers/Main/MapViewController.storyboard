@@ -27,6 +27,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <visualEffectView hidden="YES" opaque="NO" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jvu-Ly-jHS">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xOq-J5-uZb">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="extraLight"/>
+                            </visualEffectView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zex-tF-kCo">
                                 <rect key="frame" x="13" y="63" width="388" height="50"/>
                                 <subviews>
@@ -74,8 +82,12 @@
                             <constraint firstItem="Bfz-4f-Lw9" firstAttribute="leading" secondItem="cZZ-lq-SGR" secondAttribute="leading" id="6xe-Lv-M2G"/>
                             <constraint firstItem="cZZ-lq-SGR" firstAttribute="trailing" secondItem="Zex-tF-kCo" secondAttribute="trailing" constant="13" id="B62-QV-cpO"/>
                             <constraint firstItem="VK3-ng-Ccb" firstAttribute="top" secondItem="p4Z-XY-qfr" secondAttribute="bottom" id="HNH-Nm-V9R"/>
+                            <constraint firstItem="Jvu-Ly-jHS" firstAttribute="leading" secondItem="cZZ-lq-SGR" secondAttribute="leading" id="NKA-Y4-cvm"/>
                             <constraint firstItem="Zex-tF-kCo" firstAttribute="leading" secondItem="cZZ-lq-SGR" secondAttribute="leading" constant="13" id="NSO-DX-bb1"/>
                             <constraint firstItem="p4Z-XY-qfr" firstAttribute="top" secondItem="Zex-tF-kCo" secondAttribute="bottom" constant="14" id="TnH-sy-vp0"/>
+                            <constraint firstItem="Jvu-Ly-jHS" firstAttribute="top" secondItem="X6l-Ca-Jnw" secondAttribute="top" id="WAF-Mp-IBh"/>
+                            <constraint firstAttribute="bottom" secondItem="Jvu-Ly-jHS" secondAttribute="bottom" id="afb-JC-aiQ"/>
+                            <constraint firstItem="cZZ-lq-SGR" firstAttribute="trailing" secondItem="Jvu-Ly-jHS" secondAttribute="trailing" id="eih-Lt-hgX"/>
                             <constraint firstItem="cZZ-lq-SGR" firstAttribute="trailing" secondItem="p4Z-XY-qfr" secondAttribute="trailing" constant="4" id="kVe-nd-3gM"/>
                             <constraint firstItem="cZZ-lq-SGR" firstAttribute="trailing" secondItem="Bfz-4f-Lw9" secondAttribute="trailing" id="pad-LU-KOp"/>
                             <constraint firstAttribute="bottom" secondItem="Bfz-4f-Lw9" secondAttribute="bottom" id="svM-M0-LWh"/>
@@ -85,6 +97,7 @@
                         <viewLayoutGuide key="safeArea" id="cZZ-lq-SGR"/>
                     </view>
                     <connections>
+                        <outlet property="bluerEffectView" destination="Jvu-Ly-jHS" id="FOg-9O-zE5"/>
                         <outlet property="naverMapView" destination="Bfz-4f-Lw9" id="voc-An-CBR"/>
                         <outlet property="searchContainerView" destination="Zex-tF-kCo" id="m66-LG-Q1K"/>
                         <outlet property="searchTextField" destination="6lR-2o-WSq" id="S2J-RK-t0a"/>
@@ -93,6 +106,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VzI-PB-wCs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="134.5108695652174"/>
         </scene>
     </scenes>
     <resources>
