@@ -8,24 +8,10 @@
 
 import UIKit
 
-struct FilterItem {
-    var optionIcon: UIImage
-    var optionTitle: String
-}
-
 class OptionCollectionTableViewCell: UITableViewCell {
     @IBOutlet weak var collectionView: DynamicHeightCollectionView!
     
-    private var filterList: [FilterItem] = [
-        FilterItem(optionIcon: #imageLiteral(resourceName: "iconFilteringReservation"), optionTitle: "주차장"),
-        FilterItem(optionIcon: #imageLiteral(resourceName: "iconFilteringPower"), optionTitle: "흡연실"),
-        FilterItem(optionIcon: #imageLiteral(resourceName: "iconFilteringReservation"), optionTitle: "주차장"),
-        FilterItem(optionIcon: #imageLiteral(resourceName: "iconFilteringPower"), optionTitle: "남녀 분리화장실"),
-        FilterItem(optionIcon: #imageLiteral(resourceName: "iconFilteringReservation"), optionTitle: "주차장"),
-        FilterItem(optionIcon: #imageLiteral(resourceName: "iconFilteringPower"), optionTitle: "흡연실"),
-        FilterItem(optionIcon: #imageLiteral(resourceName: "iconFilteringReservation"), optionTitle: "주차장"),
-        FilterItem(optionIcon: #imageLiteral(resourceName: "iconFilteringPower"), optionTitle: "흡연실")
-    ]
+    private var filterList: [FilterItem] = FilterItem.bundles
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,6 +21,7 @@ class OptionCollectionTableViewCell: UITableViewCell {
     private func setupCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.allowsMultipleSelection = true 
         registerCells()
         reload()
     }

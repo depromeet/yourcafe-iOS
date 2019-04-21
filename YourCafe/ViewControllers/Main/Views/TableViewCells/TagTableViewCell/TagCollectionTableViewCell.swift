@@ -34,6 +34,7 @@ class TagCollectionTableViewCell: UITableViewCell {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.collectionViewLayout = LeftAlignedCollectionViewFlowLayout.tagCollectionViewLayout
+        collectionView.allowsMultipleSelection = true
         registerCells()
         reload()
     }
@@ -50,7 +51,7 @@ class TagCollectionTableViewCell: UITableViewCell {
 
 // MARK:- UICollectionViewDelegateFlowLayout
 
-extension TagCollectionTableViewCell: UICollectionViewDelegateFlowLayout {
+extension TagCollectionTableViewCell: UICollectionViewDelegateFlowLayout {    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 24, left: 0, bottom: 72, right: 0)
     }
