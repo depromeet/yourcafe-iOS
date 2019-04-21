@@ -1,12 +1,12 @@
 PODS:
   - Alamofire (4.8.1)
   - Kingfisher (5.1.0)
-  - NMapsMap (3.1.0)
+  - NMapsMap (3.2.1)
 
 DEPENDENCIES:
   - Alamofire
   - Kingfisher
-  - NMapsMap
+  - NMapsMap (~> 3.2.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -17,8 +17,8 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   Kingfisher: fcec238063d17404fca89bf0a850583211c4cbf6
-  NMapsMap: 8a23071ddd7b35b29b2fd9e5672ef20c1cb95547
+  NMapsMap: 432c7f5e90f5c406d52c3137f425143352d78430
 
-PODFILE CHECKSUM: 830f6f5c4ed2f7d04c7812e8d072dd16e747fdcf
+PODFILE CHECKSUM: 093c88d9b589f278667afd4e653ac33e14130775
 
 COCOAPODS: 1.5.3

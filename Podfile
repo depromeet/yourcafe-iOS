@@ -4,7 +4,7 @@ target 'YourCafe' do
   use_frameworks!
 
   pod 'Alamofire'
-  pod 'NMapsMap'
+  pod 'NMapsMap', '~> 3.2.0'
   pod 'Kingfisher'
 
   target 'YourCafeTests' do
