@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OptionCollectionTableViewCell: UITableViewCell {
+class FilterCollectionTableViewCell: UITableViewCell {
     @IBOutlet weak var collectionView: DynamicHeightCollectionView!
     
     private var filterList: [FilterItem] = FilterItem.bundles
@@ -27,7 +27,7 @@ class OptionCollectionTableViewCell: UITableViewCell {
     }
     
     private func registerCells() {
-        collectionView.register(UINib(nibName: OptionCollectionViewCell.reuseIdentifier, bundle: nil), forCellWithReuseIdentifier: OptionCollectionViewCell.reuseIdentifier)
+        collectionView.register(UINib(nibName: FilterCollectionViewCell.reuseIdentifier, bundle: nil), forCellWithReuseIdentifier: FilterCollectionViewCell.reuseIdentifier)
     }
     
     private func reload() {
@@ -38,7 +38,7 @@ class OptionCollectionTableViewCell: UITableViewCell {
 
 // MARK:- UICollectionViewDelegateFlowLayout
 
-extension OptionCollectionTableViewCell: UICollectionViewDelegateFlowLayout {
+extension FilterCollectionTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 24, left: 0, bottom: 72, right: 0)
     }
@@ -54,13 +54,13 @@ extension OptionCollectionTableViewCell: UICollectionViewDelegateFlowLayout {
 
 // MARK:- UICollectionViewDataSource
 
-extension OptionCollectionTableViewCell: UICollectionViewDataSource {
+extension FilterCollectionTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return filterList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: OptionCollectionViewCell.reuseIdentifier, for: indexPath) as! OptionCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FilterCollectionViewCell.reuseIdentifier, for: indexPath) as! FilterCollectionViewCell
         let option = filterList[indexPath.item]
         cell.configure(option)
         return cell

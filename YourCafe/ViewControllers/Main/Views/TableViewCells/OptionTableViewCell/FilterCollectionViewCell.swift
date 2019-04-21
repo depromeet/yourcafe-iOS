@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OptionCollectionViewCell: UICollectionViewCell {
+class FilterCollectionViewCell: UICollectionViewCell {
     struct UIMatrix {
         static let cornerRadius: CGFloat = 10
         static let borderWidth: CGFloat = 1
@@ -44,9 +44,9 @@ class OptionCollectionViewCell: UICollectionViewCell {
     }
     
     private func setupImageContainerView() {
-        imageContainerView.layer.cornerRadius = OptionCollectionViewCell.UIMatrix.cornerRadius
+        imageContainerView.layer.cornerRadius = FilterCollectionViewCell.UIMatrix.cornerRadius
         imageContainerView.layer.masksToBounds = true
-        imageContainerView.layer.borderWidth = OptionCollectionViewCell.UIMatrix.borderWidth
+        imageContainerView.layer.borderWidth = FilterCollectionViewCell.UIMatrix.borderWidth
         imageContainerView.layer.borderColor = UIColor.greyish.cgColor
     }
 }

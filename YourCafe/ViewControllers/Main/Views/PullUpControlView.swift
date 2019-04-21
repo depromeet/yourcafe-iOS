@@ -71,7 +71,7 @@ class PullUpControlView: UIView, NibInstantiable {
     
     private func registerCells() {
         tableView.register(UINib(nibName: PullUpControlTableViewHeader.reuseIdentifier, bundle: nil), forHeaderFooterViewReuseIdentifier: PullUpControlTableViewHeader.reuseIdentifier)
-        tableView.register(UINib(nibName: OptionCollectionTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: OptionCollectionTableViewCell.reuseIdentifier)
+        tableView.register(UINib(nibName: FilterCollectionTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: FilterCollectionTableViewCell.reuseIdentifier)
         tableView.register(UINib(nibName: TagCollectionTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: TagCollectionTableViewCell.reuseIdentifier)
     }
     
@@ -98,9 +98,9 @@ extension PullUpControlView: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let section = indexPath.section
-        let identifier = section == 0 ? OptionCollectionTableViewCell.reuseIdentifier : TagCollectionTableViewCell.reuseIdentifier
+        let identifier = section == 0 ? FilterCollectionTableViewCell.reuseIdentifier : TagCollectionTableViewCell.reuseIdentifier
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
-        return section == 0 ? cell as! OptionCollectionTableViewCell : cell as! TagCollectionTableViewCell
+        return section == 0 ? cell as! FilterCollectionTableViewCell : cell as! TagCollectionTableViewCell
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

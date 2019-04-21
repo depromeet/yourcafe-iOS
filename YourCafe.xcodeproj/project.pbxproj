@@ -25,10 +25,10 @@
 		3E961227226AD57C00EF21D6 /* PullUpControlTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E961226226AD57C00EF21D6 /* PullUpControlTableViewHeader.xib */; };
 		3E961229226AD61400EF21D6 /* NanumSquareOTF_acEB.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E961228226AD61400EF21D6 /* NanumSquareOTF_acEB.otf */; };
 		3E96122B226AD84200EF21D6 /* NSObject + reuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E96122A226AD84200EF21D6 /* NSObject + reuseIdentifier.swift */; };
-		3E96122F226B1DE100EF21D6 /* OptionCollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E96122D226B1DE100EF21D6 /* OptionCollectionTableViewCell.swift */; };
-		3E961230226B1DE100EF21D6 /* OptionCollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E96122E226B1DE100EF21D6 /* OptionCollectionTableViewCell.xib */; };
-		3E961233226B1F5000EF21D6 /* OptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E961231226B1F5000EF21D6 /* OptionCollectionViewCell.swift */; };
-		3E961234226B1F5000EF21D6 /* OptionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E961232226B1F5000EF21D6 /* OptionCollectionViewCell.xib */; };
+		3E96122F226B1DE100EF21D6 /* FilterCollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E96122D226B1DE100EF21D6 /* FilterCollectionTableViewCell.swift */; };
+		3E961230226B1DE100EF21D6 /* FilterCollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E96122E226B1DE100EF21D6 /* FilterCollectionTableViewCell.xib */; };
+		3E961233226B1F5000EF21D6 /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E961231226B1F5000EF21D6 /* FilterCollectionViewCell.swift */; };
+		3E961234226B1F5000EF21D6 /* FilterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E961232226B1F5000EF21D6 /* FilterCollectionViewCell.xib */; };
 		3E961237226B1F6000EF21D6 /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E961235226B1F6000EF21D6 /* TagCollectionViewCell.swift */; };
 		3E961238226B1F6000EF21D6 /* TagCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E961236226B1F6000EF21D6 /* TagCollectionViewCell.xib */; };
 		3E96123D226B386E00EF21D6 /* DynamicHeightCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E96123C226B386E00EF21D6 /* DynamicHeightCollectionView.swift */; };
@@ -80,10 +80,10 @@
 		3E961226226AD57C00EF21D6 /* PullUpControlTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PullUpControlTableViewHeader.xib; sourceTree = "<group>"; };
 		3E961228226AD61400EF21D6 /* NanumSquareOTF_acEB.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareOTF_acEB.otf; sourceTree = "<group>"; };
 		3E96122A226AD84200EF21D6 /* NSObject + reuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject + reuseIdentifier.swift"; sourceTree = "<group>"; };
-		3E96122D226B1DE100EF21D6 /* OptionCollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionCollectionTableViewCell.swift; sourceTree = "<group>"; };
-		3E96122E226B1DE100EF21D6 /* OptionCollectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OptionCollectionTableViewCell.xib; sourceTree = "<group>"; };
-		3E961231226B1F5000EF21D6 /* OptionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionCollectionViewCell.swift; sourceTree = "<group>"; };
-		3E961232226B1F5000EF21D6 /* OptionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OptionCollectionViewCell.xib; sourceTree = "<group>"; };
+		3E96122D226B1DE100EF21D6 /* FilterCollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionTableViewCell.swift; sourceTree = "<group>"; };
+		3E96122E226B1DE100EF21D6 /* FilterCollectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCollectionTableViewCell.xib; sourceTree = "<group>"; };
+		3E961231226B1F5000EF21D6 /* FilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCell.swift; sourceTree = "<group>"; };
+		3E961232226B1F5000EF21D6 /* FilterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCollectionViewCell.xib; sourceTree = "<group>"; };
 		3E961235226B1F6000EF21D6 /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
 		3E961236226B1F6000EF21D6 /* TagCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagCollectionViewCell.xib; sourceTree = "<group>"; };
 		3E96123C226B386E00EF21D6 /* DynamicHeightCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicHeightCollectionView.swift; sourceTree = "<group>"; };
@@ -260,10 +260,10 @@
 		3E96123A226B2BC200EF21D6 /* OptionTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				3E96122D226B1DE100EF21D6 /* OptionCollectionTableViewCell.swift */,
-				3E96122E226B1DE100EF21D6 /* OptionCollectionTableViewCell.xib */,
-				3E961231226B1F5000EF21D6 /* OptionCollectionViewCell.swift */,
-				3E961232226B1F5000EF21D6 /* OptionCollectionViewCell.xib */,
+				3E96122D226B1DE100EF21D6 /* FilterCollectionTableViewCell.swift */,
+				3E96122E226B1DE100EF21D6 /* FilterCollectionTableViewCell.xib */,
+				3E961231226B1F5000EF21D6 /* FilterCollectionViewCell.swift */,
+				3E961232226B1F5000EF21D6 /* FilterCollectionViewCell.xib */,
 			);
 			path = OptionTableViewCell;
 			sourceTree = "<group>";
@@ -453,7 +453,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E961227226AD57C00EF21D6 /* PullUpControlTableViewHeader.xib in Resources */,
-				3E961230226B1DE100EF21D6 /* OptionCollectionTableViewCell.xib in Resources */,
+				3E961230226B1DE100EF21D6 /* FilterCollectionTableViewCell.xib in Resources */,
 				3E6E66D322588CEA00341819 /* DetailViewController.storyboard in Resources */,
 				3E961229226AD61400EF21D6 /* NanumSquareOTF_acEB.otf in Resources */,
 				3ED39B092258869F009AB9AD /* LaunchScreen.storyboard in Resources */,
@@ -463,7 +463,7 @@
 				3E6E66DF2258995E00341819 /* PullUpControlView.xib in Resources */,
 				3E961241226B39B200EF21D6 /* TagCollectionTableViewCell.xib in Resources */,
 				3E961238226B1F6000EF21D6 /* TagCollectionViewCell.xib in Resources */,
-				3E961234226B1F5000EF21D6 /* OptionCollectionViewCell.xib in Resources */,
+				3E961234226B1F5000EF21D6 /* FilterCollectionViewCell.xib in Resources */,
 				3E6E66D622588D1400341819 /* EditViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -594,9 +594,9 @@
 				3E961237226B1F6000EF21D6 /* TagCollectionViewCell.swift in Sources */,
 				3E6E66CD22588C8300341819 /* DetailViewController.swift in Sources */,
 				3E961240226B39B200EF21D6 /* TagCollectionTableViewCell.swift in Sources */,
-				3E961233226B1F5000EF21D6 /* OptionCollectionViewCell.swift in Sources */,
+				3E961233226B1F5000EF21D6 /* FilterCollectionViewCell.swift in Sources */,
 				3E961225226AD55800EF21D6 /* PullUpControlTableViewHeader.swift in Sources */,
-				3E96122F226B1DE100EF21D6 /* OptionCollectionTableViewCell.swift in Sources */,
+				3E96122F226B1DE100EF21D6 /* FilterCollectionTableViewCell.swift in Sources */,
 				3ED39AFF2258869E009AB9AD /* AppDelegate.swift in Sources */,
 				3E6E66CB22588C7900341819 /* MapViewController.swift in Sources */,
 				3E6E66DD2258994F00341819 /* PullUpControlView.swift in Sources */,
