@@ -9,6 +9,27 @@
 import UIKit
 import NMapsMap
 
+class NaverMapViewManager: NSObject {
+    private var locationManager = CLLocationManager()
+    private var naverMapView: NMFNaverMapView
+    
+    init(naverMapView: NMFNaverMapView) {
+        self.naverMapView = naverMapView
+        super.init()
+        locationManager.delegate = self
+        moveMapCameraToCurrentLocation()
+    }
+    
+    private func moveMapCameraToCurrentLocation() {
+        guard let currentCoordinate = locationManager.location?.coordinate else { return }
+        naverMapView.mapView.moveCamera(NMFCameraUpdate(scrollTo: NMGLatLng(from: currentCoordinate)))
+    }
+}
+
+extension NaverMapViewManager: CLLocationManagerDelegate {
+    
+}
+
 class MapViewController: UIViewController {
     // MARK:- Outlets
     @IBOutlet weak var bluerEffectView: UIVisualEffectView!
@@ -20,17 +41,18 @@ class MapViewController: UIViewController {
     private var pullUpControlView: PullUpControlView?
     private var pullUpControlViewHeightConstraint: NSLayoutConstraint?
     
-    private var locationManager = CLLocationManager()
-    
     // MARK:- Constraints
     private var pullUpControlViewHeight: CGFloat = 79 + PullUpControlView.UIMatrix.cornerRadiusBottomSafeArea
     private var pullUpControlViewMaximumHeightOffset: CGFloat = 96
     
+    private var mapViewManager: NaverMapViewManager?
+    private var slideTransition: MenuSlideTransition?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-        moveMapCameraToCurrentLocation()
-        handleKeyboardHide()
+        setupMapViewManager()
+        slideTransition = MenuSlideTransition(finalWidth: 280, finalHeight: view.frame.height)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -39,12 +61,44 @@ class MapViewController: UIViewController {
         pullUpControlView = PullUpControlView.instantiateFromNib()
         setPullUpControlView()
     }
+
+    // MARK:- Setup
     
-    private func moveMapCameraToCurrentLocation() {
-        guard let currentCoordinate = locationManager.location?.coordinate else { return }
-        naverMapView.mapView.moveCamera(NMFCameraUpdate(scrollTo: NMGLatLng(from: currentCoordinate)))
+    private func setupMapViewManager() {
+        mapViewManager = NaverMapViewManager(naverMapView: naverMapView)
+    }
+    
+    // MARK:- Handle Slide Menu
+    
+    @IBAction func handleSlideMenuButton(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: MenuViewController.reuseIdentifier, bundle: nil)
+        let menuViewController = storyboard.instantiateViewController(withIdentifier: MenuViewController.reuseIdentifier)
+        menuViewController.modalPresentationStyle = .overCurrentContext
+        menuViewController.transitioningDelegate = self
+        present(menuViewController, animated: true, completion: nil)
     }
 }
+
+// MARK:- UIViewControllerTransitioningDelegate
+
+extension MapViewController: UIViewControllerTransitioningDelegate {
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        slideTransition?.transitionType = .present
+        slideTransition?.dimmingView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleMenuViewDismiss)))
+        return slideTransition
+    }
+    
+    @objc func handleMenuViewDismiss() {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        slideTransition?.transitionType = .hide
+        return slideTransition
+    }
+}
+
+// MARK:- UITextFieldDelegate
 
 extension MapViewController: UITextFieldDelegate {
     private func handleKeyboardHide() {
@@ -70,10 +124,12 @@ extension MapViewController: UITextFieldDelegate {
 }
 
 // MARK:- Setup & Layout Views
+
 extension MapViewController {
     private func setupViews() {
         setupMapView()
         setupSearchContainerView()
+        handleKeyboardHide()
     }
     
     private func setupMapView() {

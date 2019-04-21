@@ -41,6 +41,9 @@
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z75-3y-kEG">
                                         <rect key="frame" x="24" y="14" width="21" height="22"/>
                                         <state key="normal" image="iconHamburger"/>
+                                        <connections>
+                                            <action selector="handleSlideMenuButton:" destination="NkU-7U-bML" eventType="touchUpInside" id="UvS-OP-9tm"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="주소, 카페명 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6lR-2o-WSq">
                                         <rect key="frame" x="69" y="15.666666666666671" width="319" height="19"/>
