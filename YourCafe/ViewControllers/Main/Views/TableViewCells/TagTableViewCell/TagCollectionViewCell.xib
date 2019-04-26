@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NanumSquareOTFR.otf">
+            <string>NanumSquareOTF_acR</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TagCollectionViewCell" customModule="YourCafe" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="287" height="85"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="287" height="85"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4uX-n8-32M">
+                        <rect key="frame" x="0.0" y="0.0" width="287" height="85"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPr-DK-w6W">
+                                <rect key="frame" x="8" y="8" width="271" height="69"/>
+                                <fontDescription key="fontDescription" name="NanumSquareOTF_acR" family="NanumSquareOTF_ac" pointSize="16"/>
+                                <color key="textColor" red="0.64313725489999995" green="0.64313725489999995" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WPr-DK-w6W" firstAttribute="top" secondItem="4uX-n8-32M" secondAttribute="top" constant="8" id="LgQ-6K-eOc"/>
+                            <constraint firstAttribute="bottom" secondItem="WPr-DK-w6W" secondAttribute="bottom" constant="8" id="Q87-hH-ddY"/>
+                            <constraint firstItem="WPr-DK-w6W" firstAttribute="leading" secondItem="4uX-n8-32M" secondAttribute="leading" constant="8" id="Vij-Z7-MAq"/>
+                            <constraint firstAttribute="trailing" secondItem="WPr-DK-w6W" secondAttribute="trailing" constant="8" id="d5O-Aa-Rev"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="4uX-n8-32M" secondAttribute="trailing" id="Byr-E1-nMq"/>
+                <constraint firstAttribute="bottom" secondItem="4uX-n8-32M" secondAttribute="bottom" id="JpO-Xp-x6I"/>
+                <constraint firstItem="4uX-n8-32M" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="M5i-4D-jEG"/>
+                <constraint firstItem="4uX-n8-32M" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="bk9-Pi-uXs"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="287" height="85"/>
+            <connections>
+                <outlet property="labelContainerView" destination="4uX-n8-32M" id="gkz-MZ-6Hx"/>
+                <outlet property="tagLabel" destination="WPr-DK-w6W" id="dTA-Zc-CQw"/>
+            </connections>
+            <point key="canvasLocation" x="0.80000000000000004" y="67.916041979010501"/>
+        </collectionViewCell>
+    </objects>
+</document>
